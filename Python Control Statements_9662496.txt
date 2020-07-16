@@ -1,0 +1,122 @@
+								Python Control Statements
+
+1. Write a python script constat1_UserID.py for the below mentioned requirements.
+a. Read first line from /etc/passwd file. 
+b. Then split the contents of first line and store the result in list list1_UserID.
+c. Display the contents of list1_UserID on console.
+
+Answer:
+ constat1_ADID = open('D:\9608783_python\4python control statement\malli.txt','r')
+first_line = constat1_ADID.readline()
+print (first_line)
+
+2. Write a python script constat2_UserID.py for the below mentioned requirements.
+a. Read filename as input from command line argument.
+b. Display the owner of filename on console.
+c. Display the size of the filename on console.
+d. Display the link count of the filename on console.
+	
+Answer:
+ import sys
+f=input('Enter the filename')
+sys.stdout.write("{} is owner of File\n".format(pwd.getpwuid(stat(sys.argv[1]).pw_name)))
+sys.stdout.write("size of file is {} bytes\n".format(stat(sys.argv[1]).st_size))
+sys.stdout.write("{} no of link in file".format(stat(sys.argv[1]).st_nlink))
+
+3.Write a python script constat3_UserID.py for the below mentioned requirements.
+a. Read filename as input from keyboard.
+b. Find out the type of filename as normal file or directory or soft link.
+c. If filename type is normal file, then display “This is Normal file” on console.
+d. If filename type is directory, then display “This is Directory” on console.
+e. If filename type is soft link, then display “This is Soft link file” on console.
+
+Answer:
+ import sys,os
+f=input('enter the filename')
+if(os.path.islink(sys.argv[1])):
+    sys.stdout.write("Its a Soft link")
+elif(os.path.isfile(sys.argv[1])):
+    sys.stdout.write("Its a normal file")
+else:
+    sys.stdout.write("Its a directory")
+
+4. Write a python script constat4_UserID.py for the below mentioned requirements.
+a. Display the current working directory of user on console.
+b. Display the home directory of user on console.
+c. If current working directory is same as home directory, then display message “Both directories are same” on console.
+d. If current working directory is different from home directory, then display message “Both directories are different” on console.
+
+Answer:
+ import os,sys
+if(os.path.expanduser("~")==os.getcwd()):
+    sys.stdout.write("Both Directories are same")
+else:
+    sys.stdout.write("Both Directories are different")
+
+5.  Write a python script constat5_UserID.py for the below mentioned requirements.
+a. Pass 2 variables A_UserID and B_UserID from command line.
+b. Pass condition to con1_UserID variable from keyboard.
+c. If condition con1_UserID equals to “add” then do addition of 2 numbers. If condition con1_UserID equals to “sub” then do subtraction of 2 numbers.
+d. If condition con1_UserID equals to “mul” then do multiplication of 2 numbers. If condition con1_UserID equals to “div” then do division of 2 numbers.
+e. If there is no match for condition con1_UserID, then it should display “Enter proper input condition” on console.
+ 
+Answer:
+ import sys
+a = int(sys.argv[1])
+b = int(sys.argv[2])
+if(sys.argv[3]=="add"):
+    sys.stdout.write(str(a+b))
+elif(sys.argv[3]=="sub"):
+    sys.stdout.write(str(a-b))
+elif(sys.argv[3]=="mul"):
+    sys.stdout.write(str(a*b))
+elif(sys.argv[3]=="div"):
+    sys.stdout.write(str(a//b))
+else:
+    sys.stdout.write("Enter proper input condition")
+    
+6. Write a python script constat6_UserID.py for the below mentioned requirements.
+a. Pass username through keyboard. 
+b. Check whether username passed is valid user or not. If valid, then display “Valid user on console”. If not valid, then display “Invalid user on console”.
+c. If username is valid, then display total number of processes created by that username on console.
+
+Answer:
+import psutil,sys
+import getpass
+username = getpass.getuser()
+print(username)
+with open('username.txt','r') as file:
+    username = file.read()
+input_username = input()
+count = 0
+if(username==input_username):
+    sys.stdout.write("Valid User on the Console\n")
+    try:            
+        for process in psutil.process_iter():
+            #sys.stdout.write("{} {}".format(process.username(),process.name()))  This line display all the process created by uername
+            if username in process.username():
+                count+=1
+    except:
+        pass
+    finally:
+        sys.stdout.write(str(count))
+else:
+    sys.stdout.write("Invalid User on the Console")
+
+7. Write a python script constat7_UserID.py for the below mentioned requirements.
+a. Display the current working directory of user on console.
+b. Create a directory “dir1_UserID” under current working directory. Pass directory name through keyboard.
+c. Display the content of your current working directory on console.
+d. If directory “dir1_UserID” present already, then it should display “Unable to create new directory” message on console. 
+
+Answer:
+import os,sys
+cwd = os.getcwd()
+if sys.argv[1] not in os.listdir(cwd):
+    os.mkdir(sys.argv[1])
+else:
+    sys.stdout.write("Unable to create new directory\n")
+for file in os.listdir(cwd):
+    print(file)
+
+  

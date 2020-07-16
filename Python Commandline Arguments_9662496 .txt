@@ -1,0 +1,81 @@
+								 Python Commandline Arguments
+
+1. Write a python script commandline1_UserID.py for the below mentioned requirements.
+a. Read 2 numbers n1_UserID=100 and n2_UserID =200 from Commandline. Display the argv output on console.
+b. Add n1_UserID and n2_UserID and store the result in another number whose name is sum_UserID. Display the sum_UserID on console. If you are not getting the correct output, give the justification.
+c. For task (b), use casting operator int for n1_UserID and n2_UserID numbers. Display the sum_UserID on console.
+d. Display how many commandline arguments passed. 
+Answer: 2 arguments passed in commandline.
+e. Display datatype of commandline arguments passed on console.
+Answer: Datatype - integer
+
+Answer:
+import sys
+n1_9662496=int(input(sys.argv[0]))
+n2_9662496=int(input(sys.argv[1]))
+sum_9662496=int(n1_9662496+n2_9662496)
+print("sum:",sum_9662496)
+
+2.Write a python script commandline2_UserID.py for the below mentioned requirements.
+a. Read 2 strings s1_UserID=”wipro” and s2_UserID =”technologies” from Commandline.
+b. Display all the commandline arguments passed on console. 
+c. Display data type of the commandline arguments passed on console.
+d. Write sum1_UserID = s1_UserID +s2_UserID and display the result sum1_UserID on console.
+import sys
+s1_9662496=input(sys.argv[0])
+s2_9662496=input(sys.argv[1])
+sum=s1_9662496+s2_9662496
+print("sum:",sum)
+
+
+3. Write a python script commandline3_UserID.py for the below mentioned requirements.
+a. Pass 5 arguments 10, 20, 30, 40, 50 from commandline. 
+b. Display only the first and third commandline arguments passed, on console.
+c. Display the zeroth commandline ie. argv[0] argument on console.
+d. Display how many commandline arguments passed, on console.
+e. Find the average of all numbers and store in avg_UserID. Display avg_UserID on console. 
+Hint: Use int() casting operator.
+Answer:
+from sys import argv
+print(type(argv))
+print(argv[0])
+print(argv[1])
+print(argv[2])
+print(argv[3])
+print(argv[4])
+print(argv[5])
+print("the first argument is:",argv[1])
+print("the third argument is:",argv[3])
+print("the zero argument is:",argv[0])
+print("the Commandline aruments are:",len(argv))
+list=[int(sys.argv[1])+int(sys.argv[2])+int(sys.argv[3])+int(sys.argv[4])+int(sys.argv[5])]
+avg_9662496=sum(list)/5
+print("the Average is:",avg_9662496)
+	
+
+4. Write a python script commandline4_UserID.py for the below mentioned requirements.
+a. Pass first 2 letters of your name as first command line argument.
+b. Pass your employee number as second command line argument.
+c. Add the first and second commandline arguments and store in “result_UserID” variable.
+d. Display result_UserID on console. What will the output?
+Answer:
+from sys import argv
+print(type(argv))
+print(str(argv[1]))
+print(argv[2])
+result_9662496=(argv[1]+argv[2])
+print(result_9662496)
+
+5. Write a python script commandline5_UserID.py for the below mentioned requirements.
+a. Pass first name of your name as first command line argument.	
+b. Pass @wipro.com as second command line argument.
+c. Add the first and second commandline arguments and store in “result_UserID” variable.
+d. Display result_UserID on console. What will the output?
+Answer:
+from sys import argv
+print(type(argv))
+print(str(argv[1]))
+print(str(argv[2]))
+result_9662496=(argv[1]+argv[2])
+print(result_9662496)
+

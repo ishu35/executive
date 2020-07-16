@@ -1,0 +1,66 @@
+								Regular Expression
+
+1.Write a python script regexp1_UserID.py for the below mentioned requirements.
+a. Create file reg1_UserID.txt in your current working directory. Refer below information for creating file content.
+b. Read the contents of file reg1_UserID.txt line by line. 
+c. Find out the occurrence of pattern, 192.168.10.12 in reg1_ADID.txt file. If match found, display “Pattern found” otherwise display “Pattern not 
+Answer:
+
+import re
+f1=open("red1_9662496.txt",'r')
+ip="192.168.10.12"
+ug=re.match(r'[0-9][0-9][0-9].[0-9][0-9][0-9].[0-9][0-9].[0-9][0-9]',ip)
+if ug:
+    print("Match found")
+else:
+    print("Match not founf")
+f1.close()
+
+
+2. Write a python script regexp2_UserID.py for the below mentioned requirements.
+a. Refer file reg1_UserID.txt created in python script regexp1_UserID.py.
+b. Read the contents of file reg1_UserID.txt line by line. 
+c. Find out the occurrence of pattern, 192.168.10.12 in reg1_UserID.txt file. If match found, display “Pattern found” otherwise display “Pattern not found” on console.
+Answer:
+import re
+s=open("reg1_9662496.txt")
+data=s.read()
+new=re.search(r'192.168.10.12',data,re.M|re.I)
+if new:
+     print("Pattern found")
+else:
+     print("Pattern not found")
+
+
+3. Write a python script regexp3_UserID.py for the below mentioned requirements.
+a. Refer file reg1_UserID.txt created in python script regexp1_UserID.py.
+b. Read the contents of file reg1_UserID.txt line by line. 
+c. Find out the occurrence of pattern, “CIS” in reg1_UserID.txt file. If match found, then replace with another pattern “UNIX”. Display “Pattern substitution is done” otherwise display “Pattern substitution not done” on console.
+
+Answer:
+import re
+s=open("reg1_9662496.txt")
+data=s.read()
+new=re.sub(r'CIS',r'UNIX',data)
+if new:
+     print("Pattern substitution")
+else:
+     print("Pattern substitutio not done")
+
+
+4. Write a python script regexp4_UserID.py for the below mentioned requirements.
+a. Refer file reg1_UserID.txt created in python script regexp1_UserID.py.
+b. Read the contents of file reg1_UserID.txt line by line. 
+c. Create regular expression which will match for email id.
+d. Find out the occurrence of pattern, email id in reg1_UserID.txt file. If match found, display “Email id found” otherwise display “Email id not found” on console.
+
+Answer:
+import re
+f1=open("red1_9662496.txt",'r')
+data=s.read()
+new=re.match(r'john@wipro.com',data)
+if new:
+    print("Match found")
+else:
+    print("Match not found")
+

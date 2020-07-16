@@ -1,0 +1,33 @@
+Python
+
+INTRODUCTION TO PYTHON
+1. Write a Python script intr1_UserID.py for the below mentioned requirements.
+a. Print your first name on console.
+Firstname="Ishvarya"
+print("The First name is:"+Firstname)
+
+b. Print your employee number on console.
+Employeeno="9662496"
+print("The employee No is:"+Employeeno)
+
+c. Print your company name on console. 
+Companyname="Wipro"
+print("The comany name is:"+Companyname)
+
+
+
+2.Write a python script intr2_UserID.py for the below mentioned requirements
+
+a. Read your first name from keyboard and display on console.
+Firstname=input("Enter the firstname:")
+print("The First name is:"+Firstname)
+
+b. Read your employee number from keyboard and display on console.
+Employeeno=input("Enter the employeeno:")
+print("The employee No is:"+Employeeno)
+
+c. Read your company name from keyboard and display on console. 
+Companyname=input("Enter the companyname:")
+print("The comany name is:"+Companyname)
+
+

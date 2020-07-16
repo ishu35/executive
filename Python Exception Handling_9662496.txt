@@ -1,0 +1,101 @@
+								 Python Exception Handling
+
+
+1. Write a python script exception1_UserID.py for the below mentioned requirements.
+a. Open the file, newfile1_UserID.txt from your current working directory in read mode. This file is not there in current working directory. 
+b. Which type of error will get for above mentioned scenario?
+c. Handle the exception using different blocks such as try, except and finally for above mentioned scenario. 
+Answer:
+try:
+    f1=open("newfile1_9662496.txt",'r')
+    print("file opened")
+except FileNotFoundError:
+    print("File does not exist")
+except:
+    print("Other error")
+
+2. Write a python script exception2_UserID.py for the below mentioned requirements.
+a. Read num1_UserID with value 100 and num2_UserID with value 0 from keyboard.
+b. Use casting operator int( ) on num1_UserID and num2_UserID. Then, divide num1_UserID by num2_UserID and store result in div1_UserID. Display the result div1_UserID on console. 
+c. Which type of error will get for above mentioned scenario?
+d. Handle the exception using different blocks such as try, except and finally for above mentioned scenario.
+Answer: 
+num1_9662496=int(input("Enter the number:"))
+num2_9662496=int(input("Enter the number:"))
+try:
+    div1_9662496=num1_9662496/num2_9662496
+except ZeroDivisionError:
+    print("Divide by zero error")
+    
+3. Write a python script exception3_UserID.py for the below mentioned requirements.
+a. Read num1_UserID with value 100 from keyboard.
+b. Use casting operator int( ) on num1_UserID. Then, add num1_UserID with num2_UserID and store result in sum1_UserID. Display the result sum1_UserID on console. 
+c. Which type of error will get for above mentioned scenario?
+d. Handle the exception using different blocks such as try, except and finally for above mentioned scenario.
+Answer:
+num1_9662496=int(input("Enter the number:"))
+try:
+    sum1_9662496=num1_9662496+num2_9662496
+except NameError:
+    print("Name not definied")
+
+4. Write a python script exception4_UserID.py for the below mentioned requirements.
+a. Create an dictionary dict3_UserID as follows: 
+dict3_UserID = {“k1” : 10,  “k2” : 20,  “k3” : 30}
+b. Print the dict3_UserID[“k5”] on console.
+c. Which type of error will get for above mentioned scenario?
+d. Handle the exception using different blocks such as try, except and finally for above mentioned scenario. 
+Answer:
+dict3_9662496={"k1":10,"k2":20,"k3":30}
+try:
+    print(dict3_9662496["k5"])
+except KeyError:
+    print("Key not found")
+
+5. Write a python script exception5_UserID.py for the below mentioned requirements.
+a. Create an list list3_UserID as follows: 
+list3_UserID = [10, 20, 30, 40, 50]
+b. Print the list3_UserID[7] on console.
+c. Which type of error will get for above mentioned scenario?
+d. Handle the exception using different blocks such as try, except and finally for above mentioned scenario.
+Answer:
+list3_9662496=[10,20,30,40,50]
+try:
+    print(list3_9662496[7])
+except IndexError:
+    print("List index out of range")
+
+6. Write a python script exception6_UserID.py for the below mentioned requirements.
+a. Read num1_UserID with value 100 and num2_UserID with value 85 from keyboard.
+b. Subtract num1_UserID from num2_UserID and store result in sub1_UserID. Display the result sub1_UserID on console. 
+c. Which type of error will get for above mentioned scenario?
+d. Handle the exception using different blocks such as try, except and finally for above mentioned scenario.
+Answer:
+num1_9662496=int(input("Enter the number:"))
+num2_9662496=int(input("Enter the number:"))
+try:
+    sub1_9662496=num1_9662496-num2_9662496
+    print(sub1_9662496)
+except:
+    print("The answer should be in negative")
+
+
+7. Write a python script exception7_UserID.py for the below mentioned requirements.
+a. Read num1_UserID with value 100 and num2_UserID with value 85 from commandline.
+b. Python code given as follows:
+num1_UserID=sys.argv[1]
+num2_UserID=sys.argv[1] 
+print(num1_UserID)
+print(num2_UserID)
+
+c. Which type of error will get for above mentioned scenario?
+d. Handle the exception using different blocks such as try, except and finally for above mentioned scenario.
+Answer:
+num1_9662496=sys.argv[1]
+num2_9662496=sys.argv[1]
+try:
+    print(num1_9662496)
+    print(num2_9662496)
+except NameError:
+    print("Error")
+

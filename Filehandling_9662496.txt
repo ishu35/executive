@@ -1,0 +1,158 @@
+﻿                                                                                                                                                   PYTHON FILE HANDLING
+
+1)	 Write a python script fileio1_UserID.py for the below mentioned requirements.
+	a. Create file in1_UserID.txt in your current working directory. Refer below information for creating file.
+	b. Read the contents of file in1_UserID.txt line by line and display on console.
+	c. Read the entire content of file in1_UserID.txt and display on console.
+	in1_UserID.txt  File
+	We are learning file input output operation in Python
+	Completed learning w.r.t command line arguments topic
+	CIS trainings going on well
+             
+          ANSWER:
+	f1=open("in1_9662496.txt")
+	line1=(f1.readline())
+	print(line1)
+	line2=(f1.readline())
+	print(line2)
+	line3=(f1.readline())
+	print(line3)
+	f1=open("in1_9662496.txt")
+	print(f1.read())
+	
+
+2)	 Write a python script fileio2_UserID.py for the below mentioned requirements.
+	a. Use file in1_UserID.txt which was created in python script fileio1_UserID.py. 
+	b. Use the read() function to read the 11 characters from the beginning of file in1_UserID.txt and display read information on console.
+	c. Use the readline() function to read first line from file in1_UserID.txt and display read information on console. Any observation w.r.t output?
+	d. Use read() function to read the content of file in1_UserID.txt and display read information on console.
+             
+           ANSWER:
+	f1=open("in1_9662496.txt",'r')
+	print(f1.read(11))
+	f1=open("in1_962496.txt")
+	line1=f1.readline()
+	f1=open("in1_9662496.txt")
+	print(f1.read())
+	
+
+3)	Write a python script fileio3_UserID.py for the below mentioned requirements.
+	a. Use file in1_UserID.txt which was created in python script fileio1_UserID.py 
+	b. Use the readlines() function to read line by line from file in1_UserID.txt and store result in list1_UserID. Display list1_UserID on console.
+	c. Display size of list,  list1_UserID on console.
+	d. Use close() function to close the file handler. Then read all the content of file using read() function. What will be the output?
+
+           ANSWER:
+	
+	f1=open("in1_9662496.txt")
+	line=f1.readlines()
+	print(line)
+	['We are learning file input output operation in Python\n', 'Completed learning w.r.t command line arguments 	topic\n', 'CIS trainings going on well']
+	print(len("list1_9662496.py"))
+	f1=open("in1_9662496.txt")
+	print(f1.read())
+	f1.close()
+
+4)	Write a python script fileio4_UserID.py for the below mentioned requirements.
+	a. Open the file, newfile1_UserID.txt from your current working directory in read mode. This file is not there in current working directory. What will the output? 
+	b. Open the file, newfile1_UserID.txt from your current working directory in write mode. This file is not there in current working directory. What will the output? 
+	c. Write string s1_UserID=“This is the newline added at end” to the newfile1_UserID.txt file. Display the content of newfile1_UserID.txt file on console. 
+	d. Again write, string s1_UserID=“This is the newline added at end” to the newfile1_UserID.txt file. Display the content of newfile1_UserID.txt file on console. Any observation w.r.t output?
+         
+         ANSWER:
+                  A)     f1.open("newfile1_9662496.txt",'r')
+	      print(f1.read())
+	      f1.close()
+              OUTPUT:
+                          Traceback (most recent call last):
+	  File "C:/Users/elcot/AppData/Local/Programs/Python/Python38-32/fileio4_9662496.py", line 1, in <module>
+	    f1=open("newfile1_9662496.txt",'r')
+	FileNotFoundError: [Errno 2] No such file or directory: 'newfile1_9662496.txt'
+             
+                  B)   f1=open("newfile1_9662496.txt",'w')
+	    print(f1.write('ADD'))
+	    f1.close()
+              OUTPUT:
+                          3
+
+                  C)f1=open("newfile1_9662496.txt",'w')
+	print(f1.write('string s1_9662496="This is the newline added at end"'))
+	f1.close()
+              OUTPUT:
+                          52
+
+                  D)f1=open("newfile1_9662496.txt",'w')
+	print(f1.write('string s1_9662496="This is the newline added at end"'))
+	print(f1.write('string s1_9662496="This is the newline added at end"'))
+	f1.close()	
+             OUTPUT:
+                          52
+	    52
+              OBSERVATION:
+	     We dont create any text file,just we open an unknown file but write mode will write a contents to that file
+
+5)	Write a python script fileio5_UserID.py for the below mentioned requirements.
+	a. Use file in1_UserID.txt which was created in python script fileio1_UserID.py
+	b. Open the file in1_UserID.txt  in read mode as follows: 
+	fd1=open(“in1_UserID.txt”, “r”)
+	c. What will the output of fd1.name
+	d. What will the output of fd1.closed
+	e. What will the output of fd1.mode
+	f. Close the file using fd1.close(). Then find out the output of fd1.closed and display on console.
+     
+           ANSWER:
+	fd1=open("in1_9662496.txt", 'r')
+	print("the Name of the file:",fd1.name)
+	print("the File has been closed:",fd1.closed)
+	print("the File mode is:",fd1.mode)
+   
+              OUTPUT:
+	the name of the file: in1_9662496.txt
+	the file has been closed: False
+	the file mode is: r
+
+6)	Write a python script fileio6_UserID.py for the below mentioned requirements.
+	a. Open the file, in1_UserID.txt from your current working directory in read mode. Use tell() function to find out the position of cursor. What will the output? 
+	b. Use seek() function to read 11 characters from the beginning of file. Display the read characters on console. 
+	c. Use seek() function to read 11 characters from the end of file. Display the read characters on console. 
+	d. Now display the position of cursor using tell() function. Move the cursor to beginning of file using seek() function. Again display the position of cursor using tell() function.
+
+            ANSWER:
+	f1=open("in1_9662496.txt",'r')
+	print(f1.tell())
+	f1.seek(0)
+	print(f1.read(11))
+	f1=open("in1_9662496.txt",'rb')
+	f1.seek(-11,2)
+	print(f1.readline().decode("utf-8"))
+	f1.close()
+	print(f1.tell())
+	f1.seek(0)
+	print(f1.tell())
+
+7)	Write a python script fileio7_UserID.py for the below mentioned requirements.
+	a. Open the file, in1_UserID.txt from your current working directory in read mode. Read 11 characters from end of file. Display read characters on console.
+	b. Use seek(-13, 1) function then use readline() function to read one line. Display the read line on console. 
+	c. Use seek(5, 0) function then use readline() function to read one line. Display the read line on console. 
+	d. Now display the position of cursor using tell() function. 
+
+
+            ANSWER:
+	f1=open("in1_9662496.txt",'rb')
+	f1.seek(-11,2)
+	print(f1.readline().decode("utf-8"))
+	print(f1.tell())
+	f1=open("in1_9662496.txt",'r')
+	f1.seek()
+	print(f1.readline(-13))
+
+	f1=open("in1_9662496.txt",'r')
+	f1.seek(0)
+	print(f1.readline(5))
+	print(f1.tell())
+	f1.close()
+
+
+
+
+

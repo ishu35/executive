@@ -1,0 +1,171 @@
+2. LIST
+
+1.Write a Python script list1_UserID.py which contains the list as follows:
+mylist1_9662496 = [ 10, 20, 30, 40, 50, 60, 70]
+print(mylist1_9662496[3])
+print(mylist1_9662496[5])
+print(mylist1_9662496[-1])
+print(mylist1_9662496[-3])
+
+
+List and related functions
+2. Create a list mylist2_UserID consists of 10 elements. Elements will have 5 numbers and 5 strings. 
+
+a. Print the contents of mylist2_UserID on console.
+mylist2_9662496=[10,20,30,40,50,'Mysore','Banglore','Odissa','Kanpur','Adhra']
+for x in mylist2_9662496:
+    print(x)
+
+
+b. Add one element 100, at the end of list mylist2_UserID. Use appropriate function to do this task. Print the contents of mylist2_UserID on console.
+mylist2_9662496=[10,20,30,40,50,'mysore','banglore','odissa','kanpur','andhra']
+mylist2_9662496.append(100)
+for x in mylist2_9662496:
+    print(x)
+
+
+c. Add one element “wipro”, at the end of list mylist2_UserID. Use appropriate function to do this task. Print the contents of mylist2_UserID on console.
+mylist2_9662496=[10,20,30,40,50,'mysore','banglore','odissa','kanpur','andhra']
+mylist2_9662496.append('wipro')
+for x in mylist2_9662496:
+    print(x)
+
+
+List and related functions
+3.Create a list mylist3_UserID consists of 5 elements. All Elements are strings. 
+a. Print the contents of mylist3_UserID on console.
+mylist3_9662496=['mysore','banglore','odissa','kanpur','andhra']
+for x in mylist2_9662496:
+    print(x)
+
+b. Add one element “Bangalore”, at the beginning of list mylist3_UserID. Use appropriate function to do this task. Print the contents of mylist3_UserID on console.
+mylist3_9662496=['mysore','odissa','kanpur','andhra']
+mylist3_9662496.insert(0,'banglore')
+for x in mylist2_9662496: 
+    print(x)
+
+c. Remove one element from the end of list mylist3_UserID. Use appropriate function to do this task. Print the contents of mylist3_UserID on console.
+mylist3_9662496=[1,2,3,4,5]
+mylist3_9662496.pop(-1)
+for x in mylist3_9662496:
+    print(x)
+
+
+List and related functions
+4. Create a list mylist4_UserID consists of 5 elements. All Elements are numbers. 
+
+a. Print the contents of mylist4_UserID on console.
+mylist4_9662496=[1,2,3,4,5]
+for x in mylist4_9662496:
+    print(x)
+
+b. Use reverse() function on mylist4_UserID and display the contents on console.
+mylist4_9662496=[1,2,3,4,5]
+mylist4_9662496.reverse()
+for x in mylist4_9662496:
+    print(x)
+
+c. Create another list, m1_UserID = [5, 10, 15]. Add this list m1_UserID at the end of mylist4_UserID list. Use appropriate function.
+mylist4_9662496=[1,2,3,4,5]
+m1_9662496=[5,10,15]
+mylist4_9662496.append(m1_9662496)
+for x in mylist4_9662496:
+    print(x)
+
+Tuple
+5. Create a tuple mytuple1_UserID consists of 10 elements. All Elements are numbers. 
+a. Print the contents of tuple mytuple1_UserID on console.
+mytuple1_9662496=[1,2,3,4,5,6,7,8,9,0]
+for x in mytuple1_9662496:
+    print(x)
+
+b. Add new element to this tuple as follows:
+mytuple1_UserID[1] = 100. What will be the output and give justification for this.
+mytuple1_9662496=(1,2,3,4,5,6,7,8,9,0)
+mytuple1_9662496.insert(1,100)
+for x in mytuple1_9662496:
+    print(x)
+
+The Output is: Tuple is immutable. so we can't change the item in the tuple 
+and it show the "AttributeError: 'tuple' object has no attribute 'insert' ".
+
+Tuple and related functions
+6. Create a tuple mytuple2_UserID consists of 5 elements. All Elements are strings. 
+a. Print the contents of tuple mytuple1_UserID on console.
+mytuple2_9662496=['abc','def','ghi','jkl','mno']
+for x in mytuple2_9662496:
+    print(x)
+
+b. Print the first element of tuple mytuple1_UserID on console.
+mytuple2_9662496=('abc','def','ghi','jkl','mno')
+print(mytuple2_9662496[0])
+
+c. Add new element to this tuple as follows:
+mytuple1_UserID[1] = 100. What will be the output and give justification for this.
+mytuple1_9662496=(1,2,3,4,5,6,7,8,9,0)
+mytuple1_9662496.insert(1,100)
+for x in mytuple1_9662496:
+    print(x)
+
+The Output is: Tuple is immutable. so we can't change the item in the tuple 
+and it show the "AttributeError: 'tuple' object has no attribute 'insert' ".
+
+Dictionary and related functions
+7.  Create an dictionary dict1_UserID as follows: 
+dict1_UserID = {“k1” : 10,  “k2” : 20,  “k3” : 30}
+a. Print the dictionary dict1_UserID on console.
+dict1_9662496= {'k1' : 10,  'k2' : 20,  'k3' : 30}
+print(str(dict1_9662496))
+
+b. Print all the keys in dictionary dict1_UserID. Use appropriate function.
+dict1_9662496= {'k1' : 10,  'k2' : 20,  'k3' : 30}
+for x in dict1_9662496:
+    print("key:{}".format(x,dict1_9662496))
+
+c. Print all the values in dictionary dict1_UserID. Use appropriate function.
+dict1_9662496= {'k1' : 10,  'k2' : 20,  'k3' : 30}
+print(dict1_9662496.values())
+
+
+Dictionary and related functions
+8. Create an dictionary dict2_UserID as follows: 
+dict1_UserID = {“Bangalore” : 1,  “Chennai” : 2,  “Kochi” : 3}
+
+a. Print the dictionary dict2_UserID on console.
+dict1_9662496 = {“Bangalore” : 1,  “Chennai” : 2,  “Kochi” : 3}
+print(dict1_9662496)
+
+b. Add new element to dictionary dict2_UserID. 
+Key is “Hyderabad” and value is 4. Print the dictionary dict2_UserID.
+dict1_9662496 = {'Bangalore' : 1,  'Chennai' : 2,  'Kochi' : 3}
+dict1_9662496['Hyderabad']=4
+print(dict1_9662496)
+
+c. Delete the key “Kochi” from the dictionary dict2_UserID. Print the dictionary dict2_UserID.
+dict1_9662496 = {'Bangalore' : 1,'Chennai' : 2,'Kochi' : 3}
+if "kochi" in dict1_9662496:
+    del dict1_9662496["kochi"]
+print("the new one is:",dict1_9662496)
+    
+d.  Delete all the elements of dictionary dict2_UserID using appropriate function. Print the dictionary dict2_UserID.
+dict1_9662496 = {'Bangalore' : 1,'Chennai' : 2,'Kochi' : 3}
+print(dict1_9662496.clear())
+    
+String and related functions
+9. Create a string s1_UserID initialized with “we are learning Python”. 
+a. Find the length of string s1_UserID and display on console.
+string1_9662496="we are learning python"
+print(len(string1_9662496))
+
+b. Print how many times ‘e’ occurs in string s1_UserID.
+string1_9662496="we are learning python"
+print(string1_9662496.count('e'))
+
+c. What will be the output of s1_UserID.split(‘  ‘). Here ‘  ‘ is whitespace, which is delimiter.
+string1_9662496="we are learning python"
+print(string1_9662496.split(' '))
+
+The Output is: ['we', 'are', 'learning', 'python']
+
+
+
